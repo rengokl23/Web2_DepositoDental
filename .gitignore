@@ -1,0 +1,15 @@
+# Carpetas generadas automáticamente
+bin/
+obj/
+*.user
+*.suo
+*.log
+*.db
+*.DS_Store
+
+# Configuración local
+.vscode/
+.idea/
+
+# Archivos temporales
+Migrations/
