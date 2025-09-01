@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<h1>Bienvenido al Depósito Dental</h1>
+<p>Este es el inicio de tu sistema.</p>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Clientes</h5>
+                <p class="card-text">@ViewBag.TotalClientes</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Proveedores</h5>
+                <p class="card-text">@ViewBag.TotalProveedores</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-warning mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Productos</h5>
+                <p class="card-text">@ViewBag.TotalProductos</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-danger mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Ventas</h5>
+                <p class="card-text">@ViewBag.TotalVentas</p>
+            </div>
+        </div>
+    </div>
+</div>
