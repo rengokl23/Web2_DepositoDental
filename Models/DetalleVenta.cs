@@ -1,4 +1,3 @@
-// Models/DetalleVenta.cs
 using System.ComponentModel.DataAnnotations;
 
 namespace DepositoDental.Models
@@ -9,17 +8,17 @@ namespace DepositoDental.Models
 
         [Required(ErrorMessage = "Debe seleccionar un producto")]
         public int ProductoId { get; set; }
-        public Producto Producto { get; set; }
 
-        [Required(ErrorMessage = "Debe indicar la cantidad")]
-        [Range(1, int.MaxValue, ErrorMessage = "La cantidad debe ser mayor a 0")]
+        [Range(1, int.MaxValue, ErrorMessage = "La cantidad debe ser mayor que cero")]
         public int Cantidad { get; set; }
 
-        [Range(0, double.MaxValue, ErrorMessage = "El precio debe ser positivo")]
+        [Range(0.01, double.MaxValue, ErrorMessage = "El precio unitario debe ser mayor que cero")]
         public decimal PrecioUnitario { get; set; }
 
-        [Required(ErrorMessage = "Debe seleccionar la venta")]
+        [Required(ErrorMessage = "Debe seleccionar una venta")]
         public int VentaId { get; set; }
+
+        public Producto Producto { get; set; }
         public Venta Venta { get; set; }
     }
 }

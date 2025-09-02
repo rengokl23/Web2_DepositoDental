@@ -1,6 +1,4 @@
-// Models/Venta.cs
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace DepositoDental.Models
@@ -11,10 +9,11 @@ namespace DepositoDental.Models
 
         [Required(ErrorMessage = "Debe seleccionar un cliente")]
         public int ClienteId { get; set; }
+
+        [Required(ErrorMessage = "La fecha es obligatoria")]
+        [DataType(DataType.Date)]
+        public DateTime Fecha { get; set; }
+
         public Cliente Cliente { get; set; }
-
-        public DateTime Fecha { get; set; } = DateTime.Now;
-
-        public ICollection<DetalleVenta> DetalleVentas { get; set; } = new List<DetalleVenta>();
     }
 }

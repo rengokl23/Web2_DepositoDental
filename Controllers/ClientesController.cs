@@ -62,6 +62,12 @@ namespace DepositoDental.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
+            foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+           {
+           Console.WriteLine("Error: " + error.ErrorMessage);
+            }
+
             return View(cliente);
         }
 
